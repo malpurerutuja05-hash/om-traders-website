@@ -1,114 +1,379 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Om Traders Kalwan</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Om Traders | Kalwan</title>
+
 <style>
-body{
-font-family:Arial,sans-serif;
+
+*{
 margin:0;
 padding:0;
-background:#f5f5f5;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
+
+body{
+background:#f8fafc;
+color:#333;
+}
+
 header{
-background:#0d47a1;
+background:#0f172a;
+color:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+height:85vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1350&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 color:white;
 padding:20px;
-text-align:center;
 }
-.hero{
-padding:60px 20px;
-text-align:center;
-background:white;
+
+.hero-content{
+max-width:800px;
 }
+
 .hero h1{
-font-size:42px;
+font-size:55px;
+margin-bottom:20px;
 }
+
+.hero p{
+font-size:20px;
+line-height:1.6;
+margin-bottom:30px;
+}
+
 .btn{
-background:#ff6f00;
-color:white;
-padding:12px 25px;
+display:inline-block;
+padding:14px 28px;
+margin:10px;
+border-radius:8px;
 text-decoration:none;
-border-radius:5px;
+font-weight:bold;
 }
-.section{
-padding:40px 20px;
+
+.btn-primary{
+background:#f97316;
+color:white;
 }
+
+.btn-secondary{
+background:#16a34a;
+color:white;
+}
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+margin-bottom:50px;
+}
+
 .cards{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
+
 .card{
 background:white;
-padding:20px;
-border-radius:10px;
-flex:1;
-min-width:250px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+padding:30px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.1);
+transition:.3s;
 }
-footer{
-background:#222;
-color:white;
-padding:20px;
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#0f172a;
+}
+
+.about{
+background:white;
+}
+
+.features{
+background:#eef2ff;
+}
+
+.feature-box{
 text-align:center;
+padding:30px;
 }
+
+.feature-box h3{
+margin-top:15px;
+}
+
+.contact{
+background:#0f172a;
+color:white;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border:none;
+border-radius:8px;
+}
+
+button{
+background:#f97316;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.disclaimer{
+background:#fff7ed;
+padding:30px;
+border-left:5px solid orange;
+margin-top:30px;
+border-radius:10px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:36px;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>OM TRADERS</h1>
-<p>Kalwan | Hardware | Plumbing | Building Materials</p>
+<div class="logo">OM TRADERS</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-<h1>Your Trusted Building Material Partner</h1>
-<p>Serving contractors, builders and homeowners in Kalwan.</p>
-<a href="#contact" class="btn">Get Quotation</a>
+
+<div class="hero-content">
+
+<h1>Om Traders, Kalwan</h1>
+
+<p>
+Trusted Supplier of Hardware, Plumbing and Building Materials.
+Serving Builders, Contractors, Farmers and Homeowners Across Kalwan.
+</p>
+
+<a href="#contact" class="btn btn-primary">Get Quotation</a>
+
+<a href="https://wa.me/919999999999"
+class="btn btn-secondary">
+WhatsApp Us
+</a>
+
+</div>
+
 </section>
 
-<section class="section">
-<h2>Our Products</h2>
+<section id="about" class="about">
+
+<h2 class="section-title">About Om Traders</h2>
+
+<p style="text-align:center;font-size:18px;max-width:900px;margin:auto;">
+Om Traders is a trusted supplier of building materials,
+hardware products and plumbing solutions in Kalwan.
+We strive to provide quality products, competitive prices
+and reliable service for residential and commercial projects.
+</p>
+
+</section>
+
+<section id="products">
+
+<h2 class="section-title">Our Products</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>🏗 Building Materials</h3>
-<p>Cement, Steel, Sand, Bricks and more.</p>
+<p>
+Cement, Steel, Sand, Aggregates,
+Bricks and Construction Supplies.
+</p>
 </div>
 
 <div class="card">
-<h3>🚰 Plumbing Materials</h3>
-<p>PVC Pipes, CPVC Pipes, Valves, Taps and Fittings.</p>
+<h3>🚿 Plumbing Solutions</h3>
+<p>
+PVC Pipes, CPVC Pipes, Valves,
+Taps, Fittings and Accessories.
+</p>
 </div>
 
 <div class="card">
-<h3>🔩 Hardware Products</h3>
-<p>Tools, Fasteners, Nuts, Bolts and Hardware Supplies.</p>
+<h3>🔧 Hardware Products</h3>
+<p>
+Tools, Fasteners, Nuts, Bolts,
+Welding Items and Hardware Supplies.
+</p>
 </div>
 
 </div>
+
 </section>
 
-<section class="section" id="contact">
-<h2>Contact Us</h2>
+<section class="features">
+
+<h2 class="section-title">Why Choose Us</h2>
+
+<div class="cards">
+
+<div class="feature-box card">
+<h3>✅ Quality Products</h3>
+<p>Trusted brands and genuine materials.</p>
+</div>
+
+<div class="feature-box card">
+<h3>✅ Competitive Pricing</h3>
+<p>Affordable pricing for retail and bulk orders.</p>
+</div>
+
+<div class="feature-box card">
+<h3>✅ Customer Support</h3>
+<p>Friendly assistance for builders and homeowners.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Request a Quotation</h2>
+
+<div class="contact-grid">
+
+<div>
+
+<h3>Contact Information</h3>
+
+<br>
 
 <p><strong>Om Traders</strong></p>
+
 <p>Kalwan, Nashik, Maharashtra</p>
-<p>Mobile: Update Later</p>
-<p>Email: Update Later</p>
+
+<p>Mobile: Update Here</p>
+
+<p>Email: Update Here</p>
+
+</div>
+
+<div>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="tel" placeholder="Mobile Number">
+
+<input type="text" placeholder="Required Material">
+
+<textarea rows="5" placeholder="Enter Requirement"></textarea>
+
+<button type="submit">
+Request Quote
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<div class="disclaimer">
+
+<h3>Important Notice</h3>
+
+<br>
 
 <p>
-Prices shown are estimates only. Actual prices may vary based on market conditions.
+The prices displayed on this website and any
+generated quotations are approximate estimates only.
+Actual prices may vary depending on market conditions,
+supplier pricing, transportation charges, taxes and stock availability.
 Terms and conditions apply.
 </p>
+
+</div>
 
 </section>
 
 <footer>
-© 2026 Om Traders Kalwan. All Rights Reserved.
+
+© 2026 Om Traders Kalwan | All Rights Reserved
+
 </footer>
 
 </body>
